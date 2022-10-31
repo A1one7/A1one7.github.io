@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>1ove.one</title>
+<style>
+ .button1 {
+ -webkit-transition-duration: 0.4s;
+ transition-duration: 0.4s;
+ padding: 16px 32px;
+ text-align: center;
+ background-color: #4CAF50;
+ color: white;
+ border: 2px solid #4CAF50;
+ border-radius:10px;
+ font-size:40px;
+ }
+ .button1:hover {
+ background-color: #4CAF50;
+ color: white;
+ }
+ </style>
+
+<style type="text/css">
+   .wrapper {position: relative;}
+   #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+</style>
+
+
+<style type="text/css">
+body {
+    font: 1em/150% Arial, Helvetica, sans-serif;
+}
+a {
+    color: #669;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font: bold 50px/100% Arial, Helvetica, sans-serif;
+}
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+    padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}
+#header {
+    height: 180px;
+}
+#content {
+    width: 600px;
+    float: left;
+}
+#sidebar {
+    width: 300px;
+    float: right;
+}
+#footer {
+    clear: both;
+}
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+    
+    #pagewrap {
+        width: 90%;
+    }
+    #content {
+        width: 65%;
+    }
+    #sidebar {
+        width: 30%;
+    }
+ 
+}
+
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+ 
+    #content {
+        width: auto;
+        float: none;
+    }
+    #sidebar {
+        width: auto;
+        float: none;
+    }
+ 
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+ 
+    #header {
+        height: auto;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    #sidebar {
+        display: none;
+    }
+ 
+}
+
+/* border & guideline (you can ignore these) */
+#content {
+    background: #f8f8f8;
+}
+#sidebar {
+    background: #f0efef;
+}
+#header, #content, #sidebar {
+    margin-bottom: 5px;
+}
+#pagewrap, #header, #content, #sidebar, #footer {
+    border: solid 0px #ccc;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 35% auto 0; 
+    text-align: center; /*文本居中*/
+}
+
+</style>
+</head>
+ 
+<body>
+<div id="pagewrap">
+    <div id="header">
+        <h1>为了保证网页安全</h1>
+        <h1>请右上角在〔浏览器中打开〕此页面</h1>
+        <h1>或〔复制链接〕在外部浏览器中打开</h1>
+        <h1>&ensp;</h1>
+<div class="wrapper">
+   <!--<p id="text">http://ooo1ooo.gitee.io/1ove.one/home.html</p>-->
+   <textarea id="input" readonly="readonly">这是ONE6</textarea><!-- 给input添加readonly="readonly"标签，防止iOS调出输入法 -->
+   <button class="button1" onclick="copyText()">点此复制链接</button>
+</div>
+    </div>
+	<div id="content">
+		<h2>&ensp;</h2>
+		<p>&ensp;</p>
+		<p>&ensp;</p>
+		<p>&ensp;</p>
+	</div>
+    <div id="footer">
+        <h4></h4>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function copyText() {
+      /*var text = document.getElementById("text").innerText;*/
+      var text = "http://1ove.one";
+      var input = document.getElementById("input");
+      input.value = text; // 修改文本框的内容
+      input.select(); // 选中文本
+      document.execCommand("copy"); // 执行浏览器复制命令
+      alert("复制成功");
+    }
+</script>
+<script>
+    var ua = navigator.userAgent.toLowerCase();
+    var isWeixin = ua.indexOf('micromessenger') != -1;
+    var isAndroid = ua.indexOf('android') != -1;
+    var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
+
+    if(isWeixin) {
+
+        } else { 
+    var Str = "http://104.244.78.60/";
+    location.href = Str;
+    }
+</script>
+</body>
+</html>
