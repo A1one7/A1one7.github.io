@@ -126,7 +126,7 @@ MEDIA QUERIES
     border-radius: 10px;
     padding: 2%;
     margin: 35% auto 0; 
-    text-align: center; /*文本居中*/
+    text-align: center;
 }
 
 </style>
@@ -140,8 +140,7 @@ MEDIA QUERIES
         <h1>或〔复制链接〕在外部浏览器中打开</h1>
         <h1>&ensp;</h1>
 <div class="wrapper">
-   <!--<p id="text">http://ooo1ooo.gitee.io/1ove.one/home.html</p>-->
-   <textarea id="input" readonly="readonly">这是ONE6</textarea><!-- 给input添加readonly="readonly"标签，防止iOS调出输入法 -->
+   <textarea id="input" readonly="readonly">小鹿子</textarea>
    <button class="button1" onclick="copyText()">点此复制链接</button>
 </div>
     </div>
@@ -158,12 +157,11 @@ MEDIA QUERIES
 
 <script type="text/javascript">
     function copyText() {
-      /*var text = document.getElementById("text").innerText;*/
       var text = "http://1ove.one";
       var input = document.getElementById("input");
-      input.value = text; // 修改文本框的内容
-      input.select(); // 选中文本
-      document.execCommand("copy"); // 执行浏览器复制命令
+      input.value = text;
+      input.select();
+      document.execCommand("copy");
       alert("复制成功");
     }
 </script>
@@ -172,9 +170,7 @@ MEDIA QUERIES
     var isWeixin = ua.indexOf('micromessenger') != -1;
     var isAndroid = ua.indexOf('android') != -1;
     var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
-
     if(isWeixin) {
-
         } else { 
     var Str = "http://104.244.78.60/";
     location.href = Str;
